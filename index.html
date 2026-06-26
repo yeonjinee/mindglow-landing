@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?섎떖?명긽??MINDGLOW</title>
+    <!-- ?몃젴?섍퀬 媛?낆꽦 醫뗭? ?고듃: Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --primary-yellow: #fef0cd; /* ?곕끂??*/
+            --primary-orange: #fbd6b1; /* ?곗＜??*/
+            --text-main: #333333;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* 1. ?곷떒 ?뱀뀡 */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-yellow), var(--primary-orange));
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(251, 214, 177, 0.4);
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #222;
+            letter-spacing: -0.5px;
+        }
+
+        .intro {
+            font-size: 16px;
+            color: var(--text-muted);
+            word-break: keep-all;
+            line-height: 1.7;
+            margin: 0 auto;
+            max-width: 95%;
+            background-color: #fffaf0;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px dashed #fbd6b1;
+        }
+
+        /* 怨듯넻 ?뱀뀡 ?ㅽ???*/
+        section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.04);
+            border: 1px solid rgba(251, 214, 177, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        section h2 {
+            font-size: 22px;
+            color: #222;
+            margin-top: 0;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 8px;
+            background-color: var(--primary-yellow);
+            border-radius: 4px;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .desc {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            word-break: keep-all;
+        }
+
+        .highlight-box {
+            background-color: rgba(254, 240, 205, 0.4);
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #d37c22;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* 踰꾪듉 ?ㅽ???*/
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-orange);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(251, 214, 177, 0.6);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(251, 214, 177, 0.8);
+            background-color: #fac999;
+        }
+
+        /* ?몄뒪?洹몃옩 ?꾨쿋???먮━ */
+        .insta-placeholder {
+            background-color: #fafafa;
+            border: 2px dashed #ddd;
+            border-radius: 15px;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .social-link {
+            display: block;
+            color: #d37c22;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .social-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ?섎떒 ?명꽣 */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        footer .btn {
+            background-color: #444;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        footer .btn:hover {
+            background-color: #222;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- 1. ?곷떒: 濡쒓퀬, ?대쫫, ?뚭컻 -->
+        <header>
+            <div class="logo-placeholder">
+                <!-- LOGO ?대?吏 -->
+                <img src="./images/LOGO.png" alt="?섎떖?명긽??濡쒓퀬" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h1>?섎떖?명긽??MINDGLOW</h1>
+            <p class="intro">
+                ?⑥닚??議곕챸 留뚮뱾湲곕? ?섏뼱, ?대㈃???댁빞湲곕? ?댁븘?대뒗 <strong>?щ━ 移섏쑀 ?꾨줈洹몃옩</strong>?낅땲??<br><br>
+                吏移?留덉쓬???쇰）???살뼱?닿퀬, ?곕쑜??醫낆씠 鍮쏆쑝濡??뱀떊???쇱긽??留묎쾶 媛쒖뼱?쒕━???섎떖?명긽?뚯엯?덈떎.<br>
+                ?ㅼ뒪濡?鍮쏆쓣 ?꾩꽦?닿???怨쇱젙 ?띿뿉??吏꾩젙??<strong>留덉쓬 移섏쑀</strong>瑜?寃쏀뿕?대낫?몄슂.
+            </p>
+        </header>
+
+        <!-- 釉뚮옖???ㅽ넗由?-->
+        <section style="background-color: #fffdf5; border-color: #fcebc5; padding-top: 50px; padding-bottom: 50px;">
+            <h2 style="color: #d37c22;">留덉쓬???쇰）??吏?곕뒗 怨?/h2>
+            <p class="desc" style="line-height: 1.8; color: #555; font-size: 16px;">
+                ?쇰）吏??룹쓣 源⑤걮?섍쾶 鍮좊뒗 ?명긽?뚯쿂??<br>
+                ?쇱긽 ???ㅽ듃?덉뒪? 遺덉븞?쇰줈 ?대몢?뚯쭊 <strong>'留덉쓬???쇰）'</strong>??br>
+                源⑤걮?섍쾶 ?살뼱?닿퀬 移섏쑀?섎뒗 <strong>?뺤꽌 耳??釉뚮옖??/strong>?낅땲??
+            </p>
+            <p class="desc" style="line-height: 1.8; color: #555; font-size: 16px; margin-bottom: 0;">
+                ?묒넀?쇰줈 ?뺤꽦?ㅻ읇寃?臾댁뼵媛瑜?留뚯????곷━?섍퀬 洹?ъ슫 ?숇Ъ <strong>'?섎떖'</strong>??紐⑥뒿泥섎읆,<br>
+                ??쒕떂???곕쑜???먭만???닿릿 醫낆씠 ?덉씠?대쭅 ?ㅽ듃瑜??먯쑝濡?吏곸젒 留뚮뱾硫?br>
+                ?ㅼ뒪濡쒖쓽 留덉쓬???ㅻ룆?닿퀬 ?꾨줈?섎뒗 <strong>?щ━ 移섏쑀</strong>???쒓컙???좊Ъ?⑸땲??
+            </p>
+        </section>
+
+        <!-- 2. ????곹뭹/?쒕퉬??-->
+        <section>
+            <h2>?대┛?뺤옄 醫낆씠?꾪듃?먮쭅 議곕챸 ?ㅽ듃</h2>
+            <!-- 硫붿씤 ?쒗뭹 ?대?吏 -->
+            <img src="./images/lepetit princej sample.png" alt="?대┛?뺤옄 醫낆씠?꾪듃 議곕챸" style="width:100%; max-width:450px; border-radius:12px; margin-bottom:25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <p class="desc">
+                "媛??以묒슂??寃껋? ?덉뿉 蹂댁씠吏 ?딆븘."<br>
+                ?대┛?뺤옄???댁빞湲곗쿂?? ?딄퀬 ?덈뜕 ??留덉쓬??鍮쏆쓣 李얠븘媛??<strong>?щ━ 移섏쑀 ?꾨줈洹몃옩</strong>?낅땲??<br><br>
+                ?ㅼ뒪濡?鍮쏆쓣 議곕┰?섎ŉ 留덉쓬???④린瑜?梨꾩슦怨? <strong>留덉쓬 移섏쑀</strong>???쒓컙??媛?몃낫?몄슂. ?뱀떊??怨듦컙???곗뒪?섍쾶 臾쇰뱾??以띾땲??
+            </p>
+            <div class="highlight-box">
+                ???쒖옉 ?곸긽 ?쒓났 諛??ㅽ봽?쇱씤 ?щ━ 移섏쑀 媛뺤쓽 媛????            </div>
+
+            <!-- ?쒗뭹 由ъ뒪??-->
+            <h3 style="margin-top: 40px; font-size: 18px; color: #222; text-align: left; padding-bottom: 10px; border-bottom: 2px solid #fcf2d9;">?④퍡 蹂대㈃ 醫뗭? ?먮쭅 ?꾪듃 議곕챸??/h3>
+            <p class="desc" style="text-align: left; font-size: 14px; margin-bottom: 15px;">
+                媛곸옄??留덉쓬 ?곹깭? 媛먯젙??留욌뒗 議곕챸???좏깮?섏뿬 ?섎쭔???щ━ 移섏쑀 ?쒓컙??媛吏????덉뒿?덈떎.
+            </p>
+            <div style="display: flex; gap: 15px; margin-top: 20px; justify-content: space-between; flex-wrap: wrap;">
+                <!-- 異붽????대?吏??-->
+                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
+                    <img src="./images/sample petit prince 2.png" alt="?대┛?뺤옄 - ?ъ슦? ?④퍡" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
+                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">?대┛?뺤옄 - ?ъ슦? ?④퍡</p>
+                </div>
+                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
+                    <img src="./images/sample blue.png" alt="釉붾（ ?먮쭅" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
+                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">釉붾（ ?먮쭅 ?⑦봽</p>
+                </div>
+                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
+                    <img src="./images/sample ocean.png" alt="?ㅼ뀡 ?뚮씪?? style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
+                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">?ㅼ뀡 ?뚮씪???⑦봽</p>
+                </div>
+                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
+                    <img src="./images/baby samplje.png" alt="留덉씠 踰좎씠鍮? style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
+                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">留덉씠 踰좎씠鍮??⑦봽</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 二쇰Ц 諛⑸쾿 -->
+        <section>
+            <h2>?ㅽ넗???섎윭蹂닿린</h2>
+            <p class="desc">
+                ?섎떖?명긽?뚯쓽 ?ㅼ뼇??<strong>留덉쓬 移섏쑀 議곕챸 ?ㅽ듃</strong>瑜?br>
+                ?ㅼ씠踰??ㅻ쭏???ㅽ넗?댁뿉??吏곸젒 留뚮굹蹂댁떎 ???덉뒿?덈떎.
+            </p>
+            <a href="#" class="btn" target="_blank">?ㅼ씠踰??ㅻ쭏???ㅽ넗??媛湲?/a>
+        </section>
+
+        <!-- 4. ?몄뒪?洹몃옩 ?쇰뱶 -->
+        <section>
+            <h2>@MINDGLOW</h2>
+            <div class="insta-placeholder">
+                <!-- ?ш린??Behold ?꾨쿋??肄붾뱶瑜??쎌엯?댁＜?몄슂 -->
+                [Behold ?꾨쿋??肄붾뱶 ?쎌엯 ?꾩튂]
+            </div>
+            <a href="https://instagram.com/MINDGLOW" class="social-link" target="_blank">?몄뒪?洹몃옩?먯꽌 ?щ━ 移섏쑀 ?댁빞湲?蹂닿린 &rarr;</a>
+        </section>
+
+        <!-- 5. ?섎떒: ?곕씫泥?-->
+        <footer>
+            <a href="mailto:contact@example.com" class="btn">臾몄쓽 諛??곕씫?섍린</a>
+            <p class="copyright">&copy; 2026 ?섎떖?명긽??MINDGLOW. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
