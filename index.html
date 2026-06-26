@@ -2,19 +2,18 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>수달세탁소 MINDGLOW</title>
-    <!-- 세련되고 가독성 좋은 폰트: Pretendard -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         :root {
             --bg-color: #ffffff;
-            --primary-yellow: #fef0cd; /* 연노랑 */
-            --primary-orange: #fbd6b1; /* 연주황 */
+            --primary-yellow: #fef0cd;
+            --primary-orange: #fbd6b1;
             --text-main: #333333;
             --text-muted: #666666;
         }
-
         body {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
             background-color: var(--bg-color);
@@ -23,19 +22,15 @@
             padding: 0;
             line-height: 1.6;
         }
-
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 50px 20px;
         }
-
-        /* 1. 상단 섹션 */
         header {
             text-align: center;
             margin-bottom: 50px;
         }
-
         .logo-placeholder {
             width: 120px;
             height: 120px;
@@ -48,7 +43,6 @@
             box-shadow: 0 4px 15px rgba(251, 214, 177, 0.4);
             overflow: hidden;
         }
-
         h1 {
             font-size: 28px;
             font-weight: 800;
@@ -56,7 +50,6 @@
             color: #222;
             letter-spacing: -0.5px;
         }
-
         .intro {
             font-size: 16px;
             color: var(--text-muted);
@@ -69,8 +62,6 @@
             border-radius: 15px;
             border: 1px dashed #fbd6b1;
         }
-
-        /* 공통 섹션 스타일 */
         section {
             background: white;
             border-radius: 20px;
@@ -81,11 +72,9 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-
         section:hover {
             transform: translateY(-2px);
         }
-
         section h2 {
             font-size: 22px;
             color: #222;
@@ -95,7 +84,6 @@
             display: inline-block;
             font-weight: 700;
         }
-
         section h2::after {
             content: '';
             position: absolute;
@@ -108,14 +96,12 @@
             z-index: -1;
             opacity: 0.7;
         }
-
         .desc {
             font-size: 15.5px;
             color: var(--text-muted);
             margin-bottom: 20px;
             word-break: keep-all;
         }
-
         .highlight-box {
             background-color: rgba(254, 240, 205, 0.4);
             padding: 15px;
@@ -125,8 +111,6 @@
             display: inline-block;
             margin-bottom: 10px;
         }
-
-        /* 버튼 스타일 */
         .btn {
             display: inline-block;
             background-color: var(--primary-orange);
@@ -141,14 +125,11 @@
             border: none;
             cursor: pointer;
         }
-
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(251, 214, 177, 0.8);
             background-color: #fac999;
         }
-
-        /* 인스타그램 임베드 자리 */
         .insta-placeholder {
             background-color: #fafafa;
             border: 2px dashed #ddd;
@@ -158,7 +139,6 @@
             font-size: 14px;
             margin-bottom: 20px;
         }
-
         .social-link {
             display: block;
             color: #d37c22;
@@ -166,43 +146,67 @@
             font-size: 15px;
             font-weight: 600;
         }
-        
         .social-link:hover {
             text-decoration: underline;
         }
-
-        /* 하단 푸터 */
         footer {
             text-align: center;
             margin-top: 50px;
             padding-top: 40px;
             border-top: 1px solid #f0f0f0;
         }
-
         footer .btn {
             background-color: #444;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
         footer .btn:hover {
             background-color: #222;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
-
         .copyright {
             margin-top: 30px;
             font-size: 12px;
             color: #bbb;
         }
+        .product-grid {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            width: 47%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        .product-card p {
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #444;
+        }
+        .sub-heading {
+            margin-top: 40px;
+            font-size: 18px;
+            color: #222;
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fcf2d9;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        
-        <!-- 1. 상단: 로고, 이름, 소개 -->
         <header>
             <div class="logo-placeholder">
-                <!-- LOGO 이미지 -->
                 <img src="./images/LOGO.png" alt="수달세탁소 로고" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h1>수달세탁소 MINDGLOW</h1>
@@ -213,7 +217,6 @@
             </p>
         </header>
 
-        <!-- 브랜드 스토리 -->
         <section style="background-color: #fffdf5; border-color: #fcebc5; padding-top: 50px; padding-bottom: 50px;">
             <h2 style="color: #d37c22;">마음의 얼룩을 지우는 곳</h2>
             <p class="desc" style="line-height: 1.8; color: #555; font-size: 16px;">
@@ -228,10 +231,8 @@
             </p>
         </section>
 
-        <!-- 2. 대표 상품/서비스 -->
         <section>
             <h2>어린왕자 종이아트힐링 조명 키트</h2>
-            <!-- 메인 제품 이미지 -->
             <img src="./images/lepetit princej sample.png" alt="어린왕자 종이아트 조명" style="width:100%; max-width:450px; border-radius:12px; margin-bottom:25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             <p class="desc">
                 "가장 중요한 것은 눈에 보이지 않아."<br>
@@ -242,33 +243,30 @@
                 ✨ 제작 영상 제공 및 오프라인 심리 치유 강의 가능 ✨
             </div>
 
-            <!-- 제품 리스트 -->
-            <h3 style="margin-top: 40px; font-size: 18px; color: #222; text-align: left; padding-bottom: 10px; border-bottom: 2px solid #fcf2d9;">함께 보면 좋은 힐링 아트 조명들</h3>
+            <h3 class="sub-heading">함께 보면 좋은 힐링 아트 조명들</h3>
             <p class="desc" style="text-align: left; font-size: 14px; margin-bottom: 15px;">
                 각자의 마음 상태와 감정에 맞는 조명을 선택하여 나만의 심리 치유 시간을 가질 수 있습니다.
             </p>
-            <div style="display: flex; gap: 15px; margin-top: 20px; justify-content: space-between; flex-wrap: wrap;">
-                <!-- 추가된 이미지들 -->
-                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
-                    <img src="./images/sample petit prince 2.png" alt="어린왕자 - 여우와 함께" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
-                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">어린왕자 - 여우와 함께</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="./images/sample petit prince 2.png" alt="어린왕자 - 여우와 함께">
+                    <p>어린왕자 - 여우와 함께</p>
                 </div>
-                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
-                    <img src="./images/sample blue.png" alt="블루 힐링" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
-                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">블루 힐링 램프</p>
+                <div class="product-card">
+                    <img src="./images/sample blue.png" alt="블루 힐링">
+                    <p>블루 힐링 램프</p>
                 </div>
-                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
-                    <img src="./images/sample ocean.png" alt="오션 테라피" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
-                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">오션 테라피 램프</p>
+                <div class="product-card">
+                    <img src="./images/sample ocean.png" alt="오션 테라피">
+                    <p>오션 테라피 램프</p>
                 </div>
-                <div style="width: 47%; text-align: center; margin-bottom: 15px;">
-                    <img src="./images/baby samplje.png" alt="마이 베이비" style="width:100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); aspect-ratio: 1/1; object-fit: cover;">
-                    <p style="font-size: 14px; margin-top: 10px; font-weight: 600; color: #444;">마이 베이비 램프</p>
+                <div class="product-card">
+                    <img src="./images/baby samplje.png" alt="마이 베이비">
+                    <p>마이 베이비 램프</p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. 주문 방법 -->
         <section>
             <h2>스토어 둘러보기</h2>
             <p class="desc">
@@ -278,22 +276,18 @@
             <a href="#" class="btn" target="_blank">네이버 스마트 스토어 가기</a>
         </section>
 
-        <!-- 4. 인스타그램 피드 -->
         <section>
             <h2>@MINDGLOW</h2>
             <div class="insta-placeholder">
-                <!-- 여기에 Behold 임베드 코드를 삽입해주세요 -->
                 [Behold 임베드 코드 삽입 위치]
             </div>
             <a href="https://instagram.com/MINDGLOW" class="social-link" target="_blank">인스타그램에서 심리 치유 이야기 보기 &rarr;</a>
         </section>
 
-        <!-- 5. 하단: 연락처 -->
         <footer>
             <a href="mailto:contact@example.com" class="btn">문의 및 연락하기</a>
             <p class="copyright">&copy; 2026 수달세탁소 MINDGLOW. All rights reserved.</p>
         </footer>
-
     </div>
 </body>
 </html>
